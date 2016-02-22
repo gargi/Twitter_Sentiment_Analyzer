@@ -22,10 +22,10 @@ var Twit = require('twit');
 
 // Twitter Credentials
 var T = new Twit({
-  consumer_key: 'fxXLglwL8CuDXGhqg7B0Q1Mfx',
-  consumer_secret: 'NsbdruP9eESo9Bsry6FNMuMuMbjq2cY0dqVdcSDMaPwfffEDQH',
-  access_token: '701488760916148224-jJWBab9txnXVnl6q13NmpryhrlbbeQN',
-  access_token_secret: '4UgfZMmN2mtfBxoCK0ak0ruZ7C8rcuklCgc38Er5vuf96'
+    consumer_key: process.env.TWITTER_CONSUMER_KEY,
+    consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
+    access_token: process.env.TWITTER_ACCESS_TOKEN,
+    access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
 });
 
 var love_count = 0;
