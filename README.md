@@ -1,6 +1,11 @@
 Steps to run this application:
 
-1. Clone this repository and install all the dependencies using ```npm install```.
+1. Clone this repository and install all the required dependencies
+ ```
+ git clone https://github.com/gsrajadh/Twitter_Sentiment_Analyzer.git
+ cd Twitter_Setiment_Analyzer
+ npm install
+ ```
 
 2. Run the following command :
 ```
