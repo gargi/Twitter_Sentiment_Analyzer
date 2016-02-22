@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/bootstrap-theme.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="page-header">
+        <div class="col-md-10">
+          <h1 class="text-primary">Twitter Analyzer</h1>
+        </div>
+        <div id="total" class="col-md-2"></div>
+      </div>
+      <!-- Table to show statistics-->
+      <table class="table table-striped">
+        <tbody>
+          <tr>
+            <td>
+              <h3>Count of Tweets with 'Love'</h3>
+            </td>
+            <td>
+              <div id="lcount"></div>
+            </td>
+            <td>
+              <h3>Count of Tweets with 'Hate'</h3>
+            </td>
+            <td>
+              <div id="hcount"></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h3>Percentage of Tweets with 'Love'</h3>
+            </td>
+            <td>
+              <div id="lpercent"></div>
+            </td>
+            <td>
+              <h3>Percentage of Tweets with 'Hate'</h3>
+            </td>
+            <td>
+              <div id="hpercent"></div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <!--Table to show tweets.-->
+      <div class="row">
+        <div class="col-md-6">
+          <div id="l-message-metric" class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Tweets containing 'Love'</h3>
+            </div>
+          </div>
+          <div id="lbody" class="panel-body"></div>
+        </div>
+        <div class="col-md-6">
+          <div id="h-message-metric" class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Tweets containing'Hate'</h3>
+            </div>
+          </div>
+          <div id="hbody" class="panel-body"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="/javascripts/jquery.min.js"></script>
+  <script src="/javascripts/bootstrap.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <!-- bind to the data fields defined in mixin-->
+  <!-- stream the actual data from the data stream emitter-->
+  <script src="/javascripts/client.socket.io.js"></script>
+</html>

@@ -1,0 +1,50 @@
+extends layout
+// Define basic data fields using Jade’s mixin features
+// Bind to those data fields for dynamic updates
+  block styles
+  //link(rel=’stylesheet’,href=’/stylesheets/dashboard.css’)
+block scripts
+  script(src='/socket.io/socket.io.js')
+  // bind to the data fields defined in mixin
+  // stream the actual data from the data stream emitter
+  script(src='/javascripts/client.socket.io.js')
+block content
+  div(class="container")
+    div(class = "page-header")
+      div.col-md-10
+        h1(class = "text-primary").
+         Twitter Analyzer
+      div#total(class = "col-md-2")
+    table.table.table-striped
+      tbody
+       tr
+        td
+         h3.
+          Count of Tweets with 'Love'
+        td
+          div#lcount
+        td
+         h3.
+          Count of Tweets with 'Hate'
+        td
+          div#hcount
+       tr
+        td
+         h3.
+          Percentage of Tweets with 'Love'
+        td
+          div#lpercent
+        td
+         h3.
+          Percentage of Tweets with 'Hate'
+        td
+          div#hpercent
+    div(class="row")
+      div(class="col-md-6")
+        div(class="panel panel-default", id="l-message-metric")
+          div.panel-heading: h3.panel-title="Tweets containing 'Love'"
+        div#lbody(class="panel-body")
+      div(class="col-md-6")
+        div(class="panel panel-default", id="h-message-metric")
+          div.panel-heading: h3.panel-title="Tweets containing'Hate'"
+        div#hbody(class="panel-body")
